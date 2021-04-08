@@ -1,8 +1,8 @@
-#pragma once
+п»ї#pragma once
 #include <iostream>
 #include <string>
 using namespace std;
-class Message //Класс сообщений
+class Message //РљР»Р°СЃСЃ СЃРѕРѕР±С‰РµРЅРёР№
 {
 private:
     int _ot_kogo;
@@ -11,13 +11,13 @@ private:
 public:
     Message(int ot_kogo, int komu, string message);
 
-    void DisplayMessageAll(int* otkogo, int* komu, string* mess) //Функция выводит все сообщения на консоль
+    void DisplayMessageAll(int* otkogo, int* komu, string* mess) //Р¤СѓРЅРєС†РёСЏ РІС‹РІРѕРґРёС‚ РІСЃРµ СЃРѕРѕР±С‰РµРЅРёСЏ РЅР° РєРѕРЅСЃРѕР»СЊ
     {
         *otkogo = _ot_kogo;
         *komu = _komu;
         *mess = _message;
     }
-    void Zero(bool* pr)//Функция ищет пустой индех в массиве для помещения в него сообщения
+    void Zero(bool* pr)//Р¤СѓРЅРєС†РёСЏ РёС‰РµС‚ РїСѓСЃС‚РѕР№ РёРЅРґРµС… РІ РјР°СЃСЃРёРІРµ РґР»СЏ РїРѕРјРµС‰РµРЅРёСЏ РІ РЅРµРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ
     {
         if (_ot_kogo == 0)
         {

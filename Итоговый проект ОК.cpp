@@ -1,4 +1,4 @@
-#include"class Message.h"
+п»ї#include"class Message.h"
 #include"class User.h"
 
 
@@ -9,52 +9,52 @@ int main()
 {
     setlocale(LC_ALL, "Russian");
     const int sizem = 200;
-    Message* message[sizem];//Создаём массив сообщений и заполняем его нулями
+    Message* message[sizem];//РЎРѕР·РґР°С‘Рј РјР°СЃСЃРёРІ СЃРѕРѕР±С‰РµРЅРёР№ Рё Р·Р°РїРѕР»РЅСЏРµРј РµРіРѕ РЅСѓР»СЏРјРё
     for (int i = 0; i < sizem; ++i)
     {
         message[i] = new Message(int(0), int(0), string("0"));
     }
-    message[0] = new Message(int(2), int(3), string("Привет Даша!!!"));//Заполняем массив данными для примера
-    message[1] = new Message(int(3), int(2), string("Привет Петя!!!"));
-    message[2] = new Message(int(2), int(3), string("Как дела Даша!!!"));
-    message[3] = new Message(int(3), int(2), string("Как дела Петя!!!"));
-    message[4] = new Message(int(2), int(201), string("Всем привет от Пети!!!"));
+    message[0] = new Message(int(2), int(3), string("РџСЂРёРІРµС‚ Р”Р°С€Р°!!!"));//Р—Р°РїРѕР»РЅСЏРµРј РјР°СЃСЃРёРІ РґР°РЅРЅС‹РјРё РґР»СЏ РїСЂРёРјРµСЂР°
+    message[1] = new Message(int(3), int(2), string("РџСЂРёРІРµС‚ РџРµС‚СЏ!!!"));
+    message[2] = new Message(int(2), int(3), string("РљР°Рє РґРµР»Р° Р”Р°С€Р°!!!"));
+    message[3] = new Message(int(3), int(2), string("РљР°Рє РґРµР»Р° РџРµС‚СЏ!!!"));
+    message[4] = new Message(int(2), int(201), string("Р’СЃРµРј РїСЂРёРІРµС‚ РѕС‚ РџРµС‚Рё!!!"));
     const int size = 100;
-    User* user[size];//Создаём массив юзеров и заполняем его нулями
+    User* user[size];//РЎРѕР·РґР°С‘Рј РјР°СЃСЃРёРІ СЋР·РµСЂРѕРІ Рё Р·Р°РїРѕР»РЅСЏРµРј РµРіРѕ РЅСѓР»СЏРјРё
     for (int i = 0; i < size; ++i)
     {
         user[i] = new User(string("0"), string("0"), string("0"));
     }
-    user[1] = new User(string("Администратор"), string("ad"), string("1"));//Заполняем массив данными для примера
+    user[1] = new User(string("РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ"), string("ad"), string("1"));//Р—Р°РїРѕР»РЅСЏРµРј РјР°СЃСЃРёРІ РґР°РЅРЅС‹РјРё РґР»СЏ РїСЂРёРјРµСЂР°
     user[2] = new User(string("Pety"), string("p"), string("2"));
     user[3] = new User(string("Dasha"), string("d"), string("3"));
-    int menu1 = 0;//Содаём переменные для меню
+    int menu1 = 0;//РЎРѕРґР°С‘Рј РїРµСЂРµРјРµРЅРЅС‹Рµ РґР»СЏ РјРµРЅСЋ
     int menu2 = 0;
     do {
-        int us = 0;//Переменная для идентификации индекса юзера
-        string log;//Переменные для логина, пароля и имени юзера
+        int us = 0;//РџРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ РёРґРµРЅС‚РёС„РёРєР°С†РёРё РёРЅРґРµРєСЃР° СЋР·РµСЂР°
+        string log;//РџРµСЂРµРјРµРЅРЅС‹Рµ РґР»СЏ Р»РѕРіРёРЅР°, РїР°СЂРѕР»СЏ Рё РёРјРµРЅРё СЋР·РµСЂР°
         string pass;
         string name_new;
-        int otkogo =0;//Переменные для сообщения
+        int otkogo =0;//РџРµСЂРµРјРµРЅРЅС‹Рµ РґР»СЏ СЃРѕРѕР±С‰РµРЅРёСЏ
         int komu =0;
         string mess;
-        bool pr = 0;//Переменная для нахождения пустой ячейки в массиве
-        int nom_index = 0;//Переменные для написания сообщения
+        bool pr = 0;//РџРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ РЅР°С…РѕР¶РґРµРЅРёСЏ РїСѓСЃС‚РѕР№ СЏС‡РµР№РєРё РІ РјР°СЃСЃРёРІРµ
+        int nom_index = 0;//РџРµСЂРµРјРµРЅРЅС‹Рµ РґР»СЏ РЅР°РїРёСЃР°РЅРёСЏ СЃРѕРѕР±С‰РµРЅРёСЏ
         int komu_message = 0;
         string komu_messag;
-        cout << "Выберите действие:\n";//Главное меню
-        cout << "1 - Войти в свой аккаунт\n";
-        cout << "2 - Зарегестрироваться\n";
-        cout << "0 - Выйти из программы\n";
+        cout << "Р’С‹Р±РµСЂРёС‚Рµ РґРµР№СЃС‚РІРёРµ:\n";//Р“Р»Р°РІРЅРѕРµ РјРµРЅСЋ
+        cout << "1 - Р’РѕР№С‚Рё РІ СЃРІРѕР№ Р°РєРєР°СѓРЅС‚\n";
+        cout << "2 - Р—Р°СЂРµРіРµСЃС‚СЂРёСЂРѕРІР°С‚СЊСЃСЏ\n";
+        cout << "0 - Р’С‹Р№С‚Рё РёР· РїСЂРѕРіСЂР°РјРјС‹\n";
         cin >> menu1;
         switch (menu1)
         {
         case 1:
-            cout << "Введите логин ";
+            cout << "Р’РІРµРґРёС‚Рµ Р»РѕРіРёРЅ ";
             cin >> log;
-            cout << "Введите пароль ";
+            cout << "Р’РІРµРґРёС‚Рµ РїР°СЂРѕР»СЊ ";
             cin >> pass;
-            for (int i = 0; i < size; ++i)//Проверка логина и пароля
+            for (int i = 0; i < size; ++i)//РџСЂРѕРІРµСЂРєР° Р»РѕРіРёРЅР° Рё РїР°СЂРѕР»СЏ
             {
                 user[i]->Accaunt(&pr, log, pass);
                 if (pr == 1)
@@ -66,41 +66,41 @@ int main()
             if (pr == 1)
             {
                 do {
-                    user[us]->Display(us);//Вывод меню юзера, если логин и пароль совпали
+                    user[us]->Display(us);//Р’С‹РІРѕРґ РјРµРЅСЋ СЋР·РµСЂР°, РµСЃР»Рё Р»РѕРіРёРЅ Рё РїР°СЂРѕР»СЊ СЃРѕРІРїР°Р»Рё
 
                     for (int i = 0; i < sizem; ++i)
                     {
-                        message[i]->DisplayMessageAll(&otkogo, &komu, &mess);//Вывод на консоль всех сообщений юзера
+                        message[i]->DisplayMessageAll(&otkogo, &komu, &mess);//Р’С‹РІРѕРґ РЅР° РєРѕРЅСЃРѕР»СЊ РІСЃРµС… СЃРѕРѕР±С‰РµРЅРёР№ СЋР·РµСЂР°
                         if (us == komu)
                         {
                             cout << mess << " ";
-                            cout << "От: ";
-                            user[otkogo]->Name();//Вывод имени юзера
+                            cout << "РћС‚: ";
+                            user[otkogo]->Name();//Р’С‹РІРѕРґ РёРјРµРЅРё СЋР·РµСЂР°
                             cout << endl;
                         }
                         if (us == otkogo)
                         {
-                            cout << "Вы: " << mess << endl;
+                            cout << "Р’С‹: " << mess << endl;
                         }
                         if (komu == 201)
-                            cout << "Всем: " << mess << endl;
+                            cout << "Р’СЃРµРј: " << mess << endl;
                     }
 
                     cin >> menu2;
                     switch (menu2)
                     {
-                    case 1://Отправка сообщения конкретному пользователю
+                    case 1://РћС‚РїСЂР°РІРєР° СЃРѕРѕР±С‰РµРЅРёСЏ РєРѕРЅРєСЂРµС‚РЅРѕРјСѓ РїРѕР»СЊР·РѕРІР°С‚РµР»СЋ
                     {
-                        cout << "Выберите кому хотите отправить сообщение:\n";
-                        for (int i = 0; i < size; ++i)//Вывод на консоль всех пользователей для выбора
+                        cout << "Р’С‹Р±РµСЂРёС‚Рµ РєРѕРјСѓ С…РѕС‚РёС‚Рµ РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ:\n";
+                        for (int i = 0; i < size; ++i)//Р’С‹РІРѕРґ РЅР° РєРѕРЅСЃРѕР»СЊ РІСЃРµС… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ РґР»СЏ РІС‹Р±РѕСЂР°
                         {
                             user[i]->DisplayUsers(i);
                         }
-                        cin >> komu_message;//Ввод сообщения
+                        cin >> komu_message;//Р’РІРѕРґ СЃРѕРѕР±С‰РµРЅРёСЏ
                         user[komu_message]->Name();
                         cout << ":";
                         cin >> komu_messag;
-                        for (int i = 0; i < sizem; ++i)//Ищем пустой индекс в массиве message
+                        for (int i = 0; i < sizem; ++i)//РС‰РµРј РїСѓСЃС‚РѕР№ РёРЅРґРµРєСЃ РІ РјР°СЃСЃРёРІРµ message
                         {
                             message[i]->Zero(&pr);
                             if (pr == 1)
@@ -110,27 +110,27 @@ int main()
                             }
                         }
                         pr = 0;
-                        message[nom_index] = new Message(int(us), int(komu_message), string(komu_messag)); //Заполняем сообщением и кому и от кого
+                        message[nom_index] = new Message(int(us), int(komu_message), string(komu_messag)); //Р—Р°РїРѕР»РЅСЏРµРј СЃРѕРѕР±С‰РµРЅРёРµРј Рё РєРѕРјСѓ Рё РѕС‚ РєРѕРіРѕ
                     }
                     break;
-                    case 2://Отправка сообщения всем
+                    case 2://РћС‚РїСЂР°РІРєР° СЃРѕРѕР±С‰РµРЅРёСЏ РІСЃРµРј
                     {
-                        cout << "Всем: ";
-                        cin >> komu_messag;//Ввод сообщения
+                        cout << "Р’СЃРµРј: ";
+                        cin >> komu_messag;//Р’РІРѕРґ СЃРѕРѕР±С‰РµРЅРёСЏ
                         for (int i = 0; i < sizem; ++i)
                         {
-                            message[i]->Zero(&pr);//Ищем пустой индекс в массиве message
+                            message[i]->Zero(&pr);//РС‰РµРј РїСѓСЃС‚РѕР№ РёРЅРґРµРєСЃ РІ РјР°СЃСЃРёРІРµ message
                             if (pr == 1)
                             {
                                 nom_index = i;
                                 break;
                             }
                         }
-                        message[nom_index] = new Message(int(us), int(201), string(komu_messag));//Заполняем сообщением и кому и от кого. Для всех 201.
+                        message[nom_index] = new Message(int(us), int(201), string(komu_messag));//Р—Р°РїРѕР»РЅСЏРµРј СЃРѕРѕР±С‰РµРЅРёРµРј Рё РєРѕРјСѓ Рё РѕС‚ РєРѕРіРѕ. Р”Р»СЏ РІСЃРµС… 201.
                     }
                     break;
                     case 3:
-                        for (int i = 0; i < size; ++i)//Вывод всех юзеров на консоль с именами, логинами и паролями для администратора
+                        for (int i = 0; i < size; ++i)//Р’С‹РІРѕРґ РІСЃРµС… СЋР·РµСЂРѕРІ РЅР° РєРѕРЅСЃРѕР»СЊ СЃ РёРјРµРЅР°РјРё, Р»РѕРіРёРЅР°РјРё Рё РїР°СЂРѕР»СЏРјРё РґР»СЏ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°
                         {
                             user[i]->DisplayUsersAll(i);
                         }
@@ -138,19 +138,19 @@ int main()
                     case 4:
                         for (int i = 0; i < sizem; ++i)
                         {
-                            message[i]->DisplayMessageAll(&otkogo, &komu, &mess);//Вывод всех сообщений для администратора
+                            message[i]->DisplayMessageAll(&otkogo, &komu, &mess);//Р’С‹РІРѕРґ РІСЃРµС… СЃРѕРѕР±С‰РµРЅРёР№ РґР»СЏ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°
                             if (otkogo != 0)
                             {
-                                cout << "Кому: ";
+                                cout << "РљРѕРјСѓ: ";
                                 if (komu == 201)
                                 {
-                                    cout << "Всем";
+                                    cout << "Р’СЃРµРј";
                                 }
                                 else
                                 {
                                     user[komu]->Name();
                                 }
-                                cout << " " << mess << " От кого: ";
+                                cout << " " << mess << " РћС‚ РєРѕРіРѕ: ";
                                 user[otkogo]->Name();
                                 cout << endl;
                             }
@@ -158,10 +158,10 @@ int main()
                         cout << endl;
                         break;
                     case 5:
-                        cout << "Выберите кого надо удалить\n";
+                        cout << "Р’С‹Р±РµСЂРёС‚Рµ РєРѕРіРѕ РЅР°РґРѕ СѓРґР°Р»РёС‚СЊ\n";
                         for (int i = 0; i < size; ++i)
                         {
-                            user[i]->DisplayUsersAll(i);//Удаление юзера для администратора
+                            user[i]->DisplayUsersAll(i);//РЈРґР°Р»РµРЅРёРµ СЋР·РµСЂР° РґР»СЏ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°
                         }
                         int use;
                         cin >> use;
@@ -172,40 +172,40 @@ int main()
             }
             else
             {
-                cout << "Неправильный логин и/или пароль" << endl;//Если логин или пароль не правильный
+                cout << "РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ Р»РѕРіРёРЅ Рё/РёР»Рё РїР°СЂРѕР»СЊ" << endl;//Р•СЃР»Рё Р»РѕРіРёРЅ РёР»Рё РїР°СЂРѕР»СЊ РЅРµ РїСЂР°РІРёР»СЊРЅС‹Р№
             }
             break;
-        case 2://Регистрация нового пользователя
+        case 2://Р РµРіРёСЃС‚СЂР°С†РёСЏ РЅРѕРІРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
             try
             {
-                cout << "Введите имя: ";
+                cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ: ";
                 cin >> name_new;
-                for (int i = 0; i < size; ++i)//Проверка на зарегестрированное имя
+                for (int i = 0; i < size; ++i)//РџСЂРѕРІРµСЂРєР° РЅР° Р·Р°СЂРµРіРµСЃС‚СЂРёСЂРѕРІР°РЅРЅРѕРµ РёРјСЏ
                 {
                     user[i]->VerificationUser(name_new);
                 }
-                cout << "Введите логин: ";
+                cout << "Р’РІРµРґРёС‚Рµ Р»РѕРіРёРЅ: ";
                 cin >> log;
-                for (int i = 0; i < size; ++i)//Проверка на зарегестрированный логин
+                for (int i = 0; i < size; ++i)//РџСЂРѕРІРµСЂРєР° РЅР° Р·Р°СЂРµРіРµСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹Р№ Р»РѕРіРёРЅ
                 {
                     user[i]->VerificationUser(log);
                 }
-                cout << "Введите пароль: ";
+                cout << "Р’РІРµРґРёС‚Рµ РїР°СЂРѕР»СЊ: ";
                 cin >> pass;
                 for (int i = 1; i < size - 1; ++i)
                 {
-                    user[i]->ZeroUser(&pr);//Ищем пустой индекс в массиве User
+                    user[i]->ZeroUser(&pr);//РС‰РµРј РїСѓСЃС‚РѕР№ РёРЅРґРµРєСЃ РІ РјР°СЃСЃРёРІРµ User
                     if (pr == 1)
                     {
                         us = i;
                         break;
                     }
                 }
-                user[us] = new User(string(name_new), string(log), string(pass));//Заполняем данными нового юзера 
+                user[us] = new User(string(name_new), string(log), string(pass));//Р—Р°РїРѕР»РЅСЏРµРј РґР°РЅРЅС‹РјРё РЅРѕРІРѕРіРѕ СЋР·РµСЂР° 
             }
             catch (const char* e)
             {
-                cout << e << endl;//Обработка если имя или логин уже зарегестрированны
+                cout << e << endl;//РћР±СЂР°Р±РѕС‚РєР° РµСЃР»Рё РёРјСЏ РёР»Рё Р»РѕРіРёРЅ СѓР¶Рµ Р·Р°СЂРµРіРµСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹
             }
             break;
         }
